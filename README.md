@@ -1,35 +1,58 @@
-# Item Management REST API
+#  Item Management REST API
 
 A simple Spring Boot REST API for managing items.  
-This project was built as a sample task for a Freelance Java Developer opportunity.
+This project was developed as a sample task for a Freelance Java Developer opportunity.
 
 ---
 
 ## 🚀 Tech Stack
 
-- Java 17+
+- Java 17
 - Spring Boot
 - Maven
+- REST API
 - In-memory storage (ArrayList)
 
 ---
 
 ## ▶️ How to Run the Application
 
-1. Clone the repository:
+### 1️⃣ Clone the repository
+git clone https://github.com/yourusername/item-management-api.git
 
-2. Open project in IDE (Eclipse/IntelliJ)
+---
 
-3. Run:
+### 2️⃣ Open in IDE
+
+Open the project in:
+
+- IntelliJ IDEA  
+- Eclipse  
+- VS Code  
+
+---
+
+### 3️⃣ Run the application
+
+Run:
+DeltaSigmaAventuresTaskApplication.java
 
 
-## 📌 API Endpoints
+## 📌 Base API URL
+http://localhost:8080/api/items
 
-### ➜ Add Item
 
-POST `/items`
+---
 
-Request Body:
+# 📬 API Endpoints
+
+---
+
+## ➜ Add Item
+
+ POST : http://localhost:8080/api/items
+
+### Request Body
 
 ```json
 {
@@ -39,11 +62,32 @@ Request Body:
 }
 
 
-
 ➜ Get Item by ID
-
-GET /items/{id}
+GET /{id}
 
 Example:
 
-GET /items/1
+  GET :localhost:8080/api/items/103
+  
+
+Response
+{
+  "id": 1,
+  "name": "Laptop",
+  "description": "Gaming laptop"
+}
+
+
+### Validation
+
+The following validations are applied:
+
+ID must not be null
+
+Name must not be empty
+
+Description must not be empty
+
+If validation fails, API returns:
+
+400 Bad Request
