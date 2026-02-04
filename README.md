@@ -39,8 +39,7 @@ DeltaSigmaAventuresTaskApplication.java
 
 
 ## 📌 Base API URL
-http://localhost:8080/api/items
-
+https://item-management-rest-api-production.up.railway.app/api/items
 
 ---
 
@@ -50,7 +49,7 @@ http://localhost:8080/api/items
 
 ## ➜ Add Item
 
- POST : http://localhost:8080/api/items
+ POST : https://item-management-rest-api-production.up.railway.app/api/items
 
 ### Request Body
 
@@ -63,16 +62,18 @@ http://localhost:8080/api/items
 
 
 ➜ Get Item by ID
-GET /{id}
+GET https://item-management-rest-api-production.up.railway.app/api/items/
+{id}
 
 Example:
 
-  GET :localhost:8080/api/items/103
+  GET :https://item-management-rest-api-production.up.railway.app/api/items/103
+
   
 
 Response
 {
-  "id": 1,
+  "id": 103,
   "name": "Laptop",
   "description": "Gaming laptop"
 }
